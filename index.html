@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryBackground: "hsl(36, 100%, 99%)",
+              grayBlue: "hsl(233, 8%, 79%)",
+              darkGrayBlue: "hsl(236, 13%, 42%)",
+              veryDarkGrayBlue: "hsl(240, 100%, 5%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-hsl(36, 100%, 99%)">
+      <div class="relative">
+        <div class="mx-auto max-w-7xl px-6 width-full">
+          <div class="flex items-center justify-between md:space-x-10">
+            <div class="flex justify-start lg;w-0 lg:flex-1">
+              <a href="#">
+                <span class="sr-only">News Logo</span>
+                <img
+                  src="/assets/images/logo.svg"
+                  class="h-8 w-auto md:h-10"
+                  alt="News logo image"
+                />
+              </a>
+            </div>
+            <div class="-my-2 -mr-2 md:hidden">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open menu</span>
+                <!-- Heroicon name: outline/bars-3 -->
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
+            <nav>
+              <!-- continue from here -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    Home New Popular Trending Categories The Bright Future of Web 3.0? We dive
+    into the next evolution of the web that claims to put the power of the
+    platforms back into the hands of the people. But is it really fulfilling its
+    promise? Read more New Hydrogen VS Electric Cars Will hydrogen-fueled cars
+    ever catch up to EVs? The Downsides of AI Artistry What are the possible
+    adverse effects of on-demand AI image generation? Is VC Funding Drying Up?
+    Private funding by VC firms is down 50% YOY. We take a look at what that
+    means. 01 Reviving Retro PCs What happens when old PCs are given modern
+    upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and
+    budgets. 03 The Growth of Gaming How the pandemic has sparked fresh
+    opportunities.
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
