@@ -35,6 +35,7 @@
   <body
     class="bg-primaryBackground max-w-7xl w-full mx-auto px-4 dark:bg-veryDarkGrayBlue text-primaryBackground"
   >
+  <div class="overlay"></div>
     <div class="w-full">
       <div
         class="relative flex h-16 items-center justify-between w-full mt-4 mx-auto"
@@ -71,11 +72,11 @@
           </div>
           <!-- MOBILE LINKS -->
           <div
-            class="md:hidden sideBar fixed top-0 bottom-0 right-0 z-10 p-4 w-[250px] overflow-y-auto text-left bg-primaryBackground dark:bg-gray-900 text-darkGrayBlue dark:text-primaryBackground"
+            class="active:shadow-lg transition duration-150 ease-in-out sideBar fixed top-0 bottom-0 right-0 z-10 p-4 w-[250px] fade overflow-y-auto text-left bg-primaryBackground dark:bg-gray-900 text-darkGrayBlue dark:text-primaryBackground"
           >
             <div
               class="md:hidden flex justify-end w-full p-4"
-              onclick="openSideBar()"
+              onclick="closeSideBar()"
             >
               <svg
                 class="bg-primaryBackground hover:fill-blue-300"
@@ -91,22 +92,22 @@
             </div>
             <!-- continue from here -->
             <ul class="md:flex list-style-none mr-2">
-              <li class="hover:text-darkGrayBlue p-2">Home</li>
-              <li class="hover:text-darkGrayBlue p-2">New</li>
-              <li class="hover:text-darkGrayBlue p-2">Popular</li>
-              <li class="hover:text-darkGrayBlue p-2">Trending</li>
-              <li class="hover:text-darkGrayBlue p-2">Categories</li>
+              <li class="hover:text-softRed p-2">Home</li>
+              <li class="hover:text-softRed p-2">New</li>
+              <li class="hover:text-softRed p-2">Popular</li>
+              <li class="hover:text-softRed p-2">Trending</li>
+              <li class="hover:text-softRed p-2">Categories</li>
             </ul>
           </div>
           <!-- desktop links -->
           <div>
             <!-- continue from here -->
             <ul class="md:flex list-style-none hidden text-grayBlue mr-2">
-              <li class="hover:text-darkGrayBlue p-2">Home</li>
-              <li class="hover:text-darkGrayBlue p-2">New</li>
-              <li class="hover:text-darkGrayBlue p-2">Popular</li>
-              <li class="hover:text-darkGrayBlue p-2">Trending</li>
-              <li class="hover:text-darkGrayBlue p-2">Categories</li>
+              <li class="hover:text-softRed p-2">Home</li>
+              <li class="hover:text-softRed p-2">New</li>
+              <li class="hover:text-softRed p-2">Popular</li>
+              <li class="hover:text-softRed p-2">Trending</li>
+              <li class="hover:text-softRed p-2">Categories</li>
             </ul>
           </div>
         </div>
@@ -116,11 +117,15 @@
       <div class="grid md:grid-cols-3 my-8 grid-cols-1 gap-4">
         <div class="md:col-span-2">
           <div class="pb-4 w-full">
-            <img
+            <picture>
+              <source media="(max-width:650px)" srcset="./assets/images/image-web-3-mobile.jpg"></source>
+              <img
               src="./assets/images/image-web-3-desktop.jpg"
               class="w-full"
               alt="logo"
             />
+            </picture>
+            
           </div>
           <div class="md:flex block">
             <div>
@@ -155,7 +160,9 @@
             </div>
             <!-- 1 -->
             <div>
-              <h2 class="text-white font-semibold text-xl">
+              <h2
+                class="text-white font-semibold text-xl hover:text-softOrange"
+              >
                 Hydrogen VS Electric Cars
               </h2>
               <p class="text-grayBlue dark:text-grayBlue py-4 tracking wider">
@@ -168,7 +175,9 @@
 
             <!-- 2 -->
             <div>
-              <h2 class="text-white font-semibold text-xl">
+              <h2
+                class="text-white font-semibold text-xl hover:text-softOrange"
+              >
                 The Downsides of AI Artistry
               </h2>
               <p class="text-grayBlue py-4 tracking-wider dark:text-grayBlue">
@@ -182,7 +191,9 @@
 
             <!-- 3 -->
             <div>
-              <h2 class="text-white font-semibold text-xl">
+              <h2
+                class="text-white font-semibold text-xl hover:text-softOrange"
+              >
                 Is VC Funding Drying Up?
               </h2>
               <p class="text-grayBlue py-2 dark:text-grayBlue tracking-wider">
@@ -207,7 +218,9 @@
             />
             <div class="px-4">
               <h2 class="font-bold text-4xl text-grayBlue">01</h2>
-              <h3 class="font-bold my-2">Reviving Retro PCs</h3>
+              <h3 class="font-bold my-2 hover:text-softRed">
+                Reviving Retro PCs
+              </h3>
               <p class="text-darkGrayBlue">
                 What happens when old PCs are given modern upgrades?
               </p>
@@ -224,7 +237,9 @@
             />
             <div class="px-4">
               <h2 class="font-bold text-4xl text-grayBlue">02</h2>
-              <h3 class="font-bold my-2">Top 10 Laptops of 2022</h3>
+              <h3 class="font-bold my-2 hover:text-softRed">
+                Top 10 Laptops of 2022
+              </h3>
               <p class="text-darkGrayBlue">
                 Our best picks for various needs and budgets.
               </p>
@@ -241,7 +256,9 @@
             />
             <div class="px-4">
               <h2 class="font-bold text-4xl text-grayBlue">03</h2>
-              <h3 class="font-bold my-2">The Growth of Gaming</h3>
+              <h3 class="font-bold my-2 hover:text-softRed">
+                The Growth of Gaming
+              </h3>
               <p class="text-darkGrayBlue">
                 How the pandemic has sparked fresh opportunities.
               </p>
@@ -267,7 +284,14 @@
 
   <script type="text/javascript">
     function openSideBar() {
-      document.querySelector(".sideBar").classList.toggle("hidden");
+      document.querySelector(".sideBar").style.display = "block";
+      document.getElementsByClassName(".overlay").style.background = "inline-block";
+    }
+
+    function closeSideBar() {
+      document.querySelector(".sideBar").style.display = "none";
+      document.getElementsByClassName(".overlay").style.display = "none";
+
     }
   </script>
 </html>
