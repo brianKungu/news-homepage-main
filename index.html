@@ -15,17 +15,6 @@
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | News homepage</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-
     <script>
       tailwind.config = {
         theme: {
@@ -35,74 +24,244 @@
               grayBlue: "hsl(233, 8%, 79%)",
               darkGrayBlue: "hsl(236, 13%, 42%)",
               veryDarkGrayBlue: "hsl(240, 100%, 5%)",
+              softOrange: "hsl(35, 77%, 62%)",
+              softRed: "hsl(5, 85%, 63%)",
             },
           },
         },
       };
     </script>
   </head>
-  <body class="bg-hsl(36, 100%, 99%)">
-      <div class="relative">
-        <div class="mx-auto max-w-7xl px-6 width-full">
-          <div class="flex items-center justify-between md:space-x-10">
-            <div class="flex justify-start lg;w-0 lg:flex-1">
-              <a href="#">
-                <span class="sr-only">News Logo</span>
-                <img
-                  src="/assets/images/logo.svg"
-                  class="h-8 w-auto md:h-10"
-                  alt="News logo image"
-                />
-              </a>
-            </div>
-            <div class="-my-2 -mr-2 md:hidden">
-              <button
-                type="button"
-                class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                aria-expanded="false"
+  <body
+    class="bg-primaryBackground max-w-7xl w-full mx-auto px-4 dark:bg-veryDarkGrayBlue text-primaryBackground"
+  >
+    <div class="w-full">
+      <div
+        class="relative flex h-16 items-center justify-between w-full mt-4 mx-auto"
+      >
+        <div class="flex items-center justify-between w-full">
+          <div class="justify-start items-left mt-2 lg:mt-0 w-full">
+            <img
+              src="/assets/images/logo.svg"
+              class="w-10 h-10 bg-primaryBackground"
+              alt="logo"
+            />
+          </div>
+          <div
+            class="md:hidden flex justify-end w-full"
+            onclick="openSideBar()"
+          >
+            <img
+              src="\assets\images\icon-menu.svg"
+              alt="icon-menu"
+              class="bg-primaryBackground"
+            />
+          </div>
+          <!-- MOBILE LINKS -->
+          <div
+            class="md:hidden sideBar fixed top-0 bottom-0 right-0 z-10 p-4 w-[250px] overflow-y-auto text-left bg-primaryBackground dark:bg-gray-900 text-darkGrayBlue dark:text-primaryBackground"
+          >
+            <div
+              class="md:hidden flex justify-end w-full p-4"
+              onclick="openSideBar()"
+            >
+              <svg
+                class="bg-primaryBackground hover:fill-blue-300"
+                width="32"
+                height="31"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <span class="sr-only">Open menu</span>
-                <!-- Heroicon name: outline/bars-3 -->
-                <svg
-                  class="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-              </button>
+                <g fill="#00001A" fill-rule="evenodd">
+                  <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+                  <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+                </g>
+              </svg>
             </div>
-            <nav>
-              <!-- continue from here -->
-            </nav>
+            <!-- continue from here -->
+            <ul class="md:flex list-style-none mr-2">
+              <li class="hover:text-darkGrayBlue p-2">Home</li>
+              <li class="hover:text-darkGrayBlue p-2">New</li>
+              <li class="hover:text-darkGrayBlue p-2">Popular</li>
+              <li class="hover:text-darkGrayBlue p-2">Trending</li>
+              <li class="hover:text-darkGrayBlue p-2">Categories</li>
+            </ul>
+          </div>
+          <!-- desktop links -->
+          <div>
+            <!-- continue from here -->
+            <ul class="md:flex list-style-none hidden text-grayBlue mr-2">
+              <li class="hover:text-darkGrayBlue p-2">Home</li>
+              <li class="hover:text-darkGrayBlue p-2">New</li>
+              <li class="hover:text-darkGrayBlue p-2">Popular</li>
+              <li class="hover:text-darkGrayBlue p-2">Trending</li>
+              <li class="hover:text-darkGrayBlue p-2">Categories</li>
+            </ul>
           </div>
         </div>
       </div>
-    Home New Popular Trending Categories The Bright Future of Web 3.0? We dive
-    into the next evolution of the web that claims to put the power of the
-    platforms back into the hands of the people. But is it really fulfilling its
-    promise? Read more New Hydrogen VS Electric Cars Will hydrogen-fueled cars
-    ever catch up to EVs? The Downsides of AI Artistry What are the possible
-    adverse effects of on-demand AI image generation? Is VC Funding Drying Up?
-    Private funding by VC firms is down 50% YOY. We take a look at what that
-    means. 01 Reviving Retro PCs What happens when old PCs are given modern
-    upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and
-    budgets. 03 The Growth of Gaming How the pandemic has sparked fresh
-    opportunities.
+    </div>
+    <main>
+      <div class="grid md:grid-cols-3 my-8 grid-cols-1 gap-4">
+        <div class="md:col-span-2">
+          <div class="pb-4 w-full">
+            <img
+              src="\assets\images\image-web-3-desktop.jpg"
+              class="w-full"
+              alt="logo"
+            />
+          </div>
+          <div class="md:flex block">
+            <div>
+              <h1
+                class="font-extrabold capitalize md:text-6xl text-4xl text-veryDarkGrayBlue dark:text-primaryBackground"
+              >
+                The bright future of web 3.0?
+              </h1>
+            </div>
+            <div class="pt-2 relative">
+              <p class="text-darkGrayBlue leading-loose dark:text-grayBlue">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <div class="md:absolute md:bottom-0 items-left mt-4 md:mt-0">
+                <button
+                  class="rounded-sm text-center bg-softRed py-2 px-6 font-bold text-lg uppercase text-white"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-span-1 bg-veryDarkGrayBlue dark:border-2 dark:rounded-md mt-10 md:mt-0"
+        >
+          <div class="p-6 flex flex-col gap-4">
+            <div>
+              <h1 class="text-softOrange text-4xl font-bold">New</h1>
+            </div>
+            <!-- 1 -->
+            <div>
+              <h2 class="text-white font-semibold text-xl">
+                Hydrogen VS Electric Cars
+              </h2>
+              <p
+                class="text-grayBlue dark:text-grayBlue py-2 text-lg tracking wider"
+              >
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+              <div class="py-4 w-full mx-auto">
+                <hr />
+              </div>
+            </div>
 
-    <div class="attribution">
+            <!-- 2 -->
+            <div>
+              <h2 class="text-white font-semibold text-xl">
+                The Downsides of AI Artistry
+              </h2>
+              <p
+                class="text-grayBlue py-2 text-lg tracking-wider dark:text-grayBlue"
+              >
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+              <div class="py-4 w-full mx-auto">
+                <hr />
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div>
+              <h2 class="text-white font-semibold text-xl">
+                Is VC Funding Drying Up?
+              </h2>
+              <p
+                class="text-grayBlue py-2 text-lg dark:text-grayBlue tracking-wider"
+              >
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-center mx-auto flex-col md:flex-row gap-4"
+      >
+        <!-- 1 -->
+        <div>
+          <div class="flex w-full items-center justify-center">
+            <img
+              src="\assets\images\image-retro-pcs.jpg"
+              alt=""
+              class="w-24 h-32 md:h-36 md:w-36"
+            />
+            <div class="px-4">
+              <h2 class="font-bold text-4xl text-grayBlue">01</h2>
+              <h3 class="font-bold my-2">Reviving Retro PCs</h3>
+              <p class="text-darkGrayBlue">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div>
+          <div class="flex w-full items-center justify-center">
+            <img
+              src="\assets\images\image-top-laptops.jpg"
+              alt=""
+              class="w-24 h-32 md:h-36 md:w-36"
+            />
+            <div class="px-4">
+              <h2 class="font-bold text-4xl text-grayBlue">02</h2>
+              <h3 class="font-bold my-2">Top 10 Laptops of 2022</h3>
+              <p class="text-darkGrayBlue">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div>
+          <div class="flex w-full items-center justify-center">
+            <img
+              src="\assets\images\image-gaming-growth.jpg"
+              alt=""
+              class="w-24 h-32 md:h-36 md:w-36"
+            />
+            <div class="px-4">
+              <h2 class="font-bold text-4xl text-grayBlue">03</h2>
+              <h3 class="font-bold my-2">The Growth of Gaming</h3>
+              <p class="text-darkGrayBlue">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution md:flex items-center justify-center mt-6">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a
+        href="https://github.com/brianKungu"
+        class="tracking-wider text-softOrange"
+      >
+        Brian Kung'u</a
+      >.
     </div>
   </body>
+
+  <script type="text/javascript">
+    function openSideBar() {
+      document.querySelector(".sideBar").classList.toggle("hidden");
+    }
+  </script>
 </html>

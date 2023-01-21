@@ -1,9 +1,26 @@
 /* global css properties */
 @import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
-* {
+/*html,
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Inter";
+  max-width: 1440px;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 15px;
+}
+@media screen {
+  * {
+    margin: 0 1em;
+  }
+} */
+
+hmtl {
   max-width: 1440px;
   width: 100%;
-  margin: 1rem auto;
-  font-family: "Inter", cursive;
-  font-size: 15px;
+  margin: 0 auto;
+  font-family: "Inter";
 }
